@@ -4,8 +4,8 @@ set -e
 
 rm -rf opencrvs-core
 rm -rf opencrvs-countryconfig
-git clone https://github.com/opencrvs/opencrvs-core.git
-git clone https://github.com/opencrvs/opencrvs-countryconfig.git
+git clone --branch develop --depth=1 https://github.com/opencrvs/opencrvs-core.git
+git clone --branch develop --depth=1 https://github.com/opencrvs/opencrvs-countryconfig.git
 
 cd opencrvs-countryconfig
 yarn
@@ -31,4 +31,3 @@ sudo apt-get install -y gettext
 # Networking configuration
 envsubst < client-config.js > opencrvs-countryconfig/src/client-config.js
 envsubst < login-config.js > opencrvs-countryconfig/src/login-config.js
-
