@@ -14,12 +14,12 @@
     {
       "label": "Start OpenCRVS services",
       "type": "shell",
-      "command": "cd opencrvs-core && yarn dev --only-services",
+      "command": "cd opencrvs-core && COUNTRY_CONFIG_URL=\"http://$CODESPACE_NAME-3040.app.github.dev\" yarn dev --only-services",
       "problemMatcher": [],
       "group": {
         "kind": "build",
         "isDefault": true
-      }
+      },
     },
     {
       "label": "Start OpenCRVS country config",

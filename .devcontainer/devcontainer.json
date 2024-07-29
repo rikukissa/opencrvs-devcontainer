@@ -4,5 +4,6 @@
   "features": {
     "docker-in-docker": "latest"
   },
+  "forwardPorts": [3000, 3020, 3040, 7070, 2021, 4040],
   "postCreateCommand": "./setup.sh"
 }
