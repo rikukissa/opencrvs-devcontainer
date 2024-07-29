@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start OpenCRVS dependencies",
+      "type": "shell",
+      "command": "cd opencrvs-core && yarn dev --only-dependencies",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Start OpenCRVS services",
+      "type": "shell",
+      "command": "cd opencrvs-core && yarn dev --only-services",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Start OpenCRVS country config",
+      "type": "shell",
+      "command": "cd opencrvs-countryconfig && yarn dev",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
