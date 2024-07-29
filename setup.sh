@@ -28,6 +28,7 @@ cd ..
 sudo apt-get update
 sudo apt-get install -y gettext
 
+# Networking configuration
 envsubst < client-config.js > opencrvs-countryconfig/src/client-config.js
 envsubst < login-config.js > opencrvs-countryconfig/src/login-config.js
 

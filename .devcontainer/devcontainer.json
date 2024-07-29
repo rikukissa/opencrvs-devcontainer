@@ -7,6 +7,29 @@
       "version": "18.19.1"
     }
   },
-  "forwardPorts": [3000, 3020, 3040, 7070, 2021, 4040],
+  "forwardPorts": [3000, 3020, 3040, 7070, 2021, 4040, 3535],
+  "portsAttributes": {
+    "3000": {
+      "label": "Client"
+    },
+    "3020": {
+      "label": "Login"
+    },
+    "3040": {
+      "label": "Country config"
+    },
+    "7070": {
+      "label": "Gateway"
+    },
+    "2021": {
+      "label": "Config"
+    },
+    "4040": {
+      "label": "Auth"
+    },
+    "3535": {
+      "label": "Minio"
+    }
+  },
   "postCreateCommand": "./setup.sh"
 }

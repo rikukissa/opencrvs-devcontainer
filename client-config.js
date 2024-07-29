@@ -9,12 +9,12 @@
  * Copyright (C) The OpenCRVS Authors located at https://github.com/opencrvs/opencrvs-core/blob/master/AUTHORS.
  */
 window.config = {
-  API_GATEWAY_URL: `http://${CODESPACE_NAME}-7070.app.github.dev/`,
-  CONFIG_API_URL: 'http://${CODESPACE_NAME}-2021.app.github.dev',
-  LOGIN_URL: 'http://${CODESPACE_NAME}-3020.app.github.dev',
-  AUTH_URL: 'http://${CODESPACE_NAME}-7070.app.github.dev/auth/',
+  API_GATEWAY_URL: `https://${CODESPACE_NAME}-7070.app.github.dev/`,
+  CONFIG_API_URL: 'https://${CODESPACE_NAME}-2021.app.github.dev',
+  LOGIN_URL: 'https://${CODESPACE_NAME}-3020.app.github.dev',
+  AUTH_URL: 'https://${CODESPACE_NAME}-7070.app.github.dev/auth/',
   MINIO_BUCKET: 'ocrvs',
-  COUNTRY_CONFIG_URL: 'http://${CODESPACE_NAME}-3040.app.github.dev',
+  COUNTRY_CONFIG_URL: 'https://${CODESPACE_NAME}-3040.app.github.dev',
   // Country code in uppercase ALPHA-3 format
   COUNTRY: 'FAR',
   LANGUAGES: 'en,fr',

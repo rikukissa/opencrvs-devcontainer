@@ -14,7 +14,17 @@
     {
       "label": "Start OpenCRVS services",
       "type": "shell",
-      "command": "cd opencrvs-core && COUNTRY_CONFIG_URL=\"http://$CODESPACE_NAME-3040.app.github.dev\" yarn dev --only-services",
+      "command": "cd opencrvs-core && npx lerna run build --scope @opencrvs/commons && MINIO_URL=\"https://$CODESPACE_NAME-3535.app.github.dev\" npx lerna run build --scope @opencrvs/components && OTHER_LERNA_FLAGS=\"--ignore @opencrvs/components --ignore @opencrvs/client --ignore @opencrvs/login\" yarn start",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+    },
+    {
+      "label": "Start OpenCRVS clients",
+      "type": "shell",
+      "command": "cd opencrvs-core && COUNTRY_CONFIG_URL=\"https://$CODESPACE_NAME-3040.app.github.dev\" npx lerna exec --scope @opencrvs/client --scope @opencrvs/login -- yarn start --host",
       "problemMatcher": [],
       "group": {
         "kind": "build",
@@ -24,7 +34,17 @@
     {
       "label": "Start OpenCRVS country config",
       "type": "shell",
-      "command": "cd opencrvs-countryconfig && yarn dev",
+      "command": "cd opencrvs-countryconfig && COUNTRY_CONFIG_URL=\"https://$CODESPACE_NAME-3040.app.github.dev\" yarn dev",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Seed database",
+      "type": "shell",
+      "command": "cd opencrvs-core && yarn seed:dev",
       "problemMatcher": [],
       "group": {
         "kind": "build",
