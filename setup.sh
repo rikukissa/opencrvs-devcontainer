@@ -1,9 +1,7 @@
 #!/bin/bash
 set -e
 
-nvm install 18.19.1
-nvm use 18.19.1
-nvm alias default 18.19.1
+
 rm -rf opencrvs-core
 rm -rf opencrvs-countryconfig
 git clone https://github.com/opencrvs/opencrvs-core.git

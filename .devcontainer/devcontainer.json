@@ -1,8 +1,11 @@
 {
   "name": "Docker Compose Codespace",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "docker-in-docker": "latest"
+    "docker-in-docker": "latest",
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18.19.1"
+    }
   },
   "forwardPorts": [3000, 3020, 3040, 7070, 2021, 4040],
   "postCreateCommand": "./setup.sh"
