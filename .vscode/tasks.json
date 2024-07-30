@@ -24,7 +24,7 @@
     {
       "label": "Start OpenCRVS clients",
       "type": "shell",
-      "command": "cd opencrvs-core && COUNTRY_CONFIG_URL=\"https://$CODESPACE_NAME-3040.app.github.dev\" npx lerna exec --scope @opencrvs/client --scope @opencrvs/login -- yarn start --host",
+      "command": "cd opencrvs-core && COUNTRY_CONFIG_URL=\"https://$CODESPACE_NAME-3040.app.github.dev\" WDS_SOCKET_PORT=0 npx lerna exec --scope @opencrvs/client --scope @opencrvs/login -- yarn start --host",
       "problemMatcher": [],
       "group": {
         "kind": "build",
