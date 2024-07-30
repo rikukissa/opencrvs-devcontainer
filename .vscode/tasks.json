@@ -14,7 +14,7 @@
     {
       "label": "Start OpenCRVS services",
       "type": "shell",
-      "command": "cd opencrvs-core && npx lerna run build --scope @opencrvs/commons && MINIO_URL=\"https://$CODESPACE_NAME-3535.app.github.dev\" npx lerna run build --scope @opencrvs/components && OTHER_LERNA_FLAGS=\"--ignore @opencrvs/components --ignore @opencrvs/client --ignore @opencrvs/login\" yarn start",
+      "command": "cd opencrvs-core && npx concurrently 'npx lerna run build --scope @opencrvs/commons && npx lerna run build --scope @opencrvs/components && OTHER_LERNA_FLAGS=\"--ignore @opencrvs/components --ignore @opencrvs/documents --ignore @opencrvs/client --ignore @opencrvs/login\" yarn start' 'cd packages/documents && MINIO_URL=\"$CODESPACE_NAME-3535.app.github.dev\" NODE_ENV=production NODE_OPTIONS=--dns-result-order=ipv4first npx nodemon --exec ts-node -r tsconfig-paths/register src/index.ts'",
       "problemMatcher": [],
       "group": {
         "kind": "build",
